@@ -8,6 +8,7 @@ namespace zadatak_2_net
     {
         public override string generatePassword(int size)
         {
+            // Dodan komentar
             throw new NotImplementedException("TODO");
         }
     }
