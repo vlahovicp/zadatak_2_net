@@ -10,10 +10,12 @@ namespace zadatak_2_net
         {
             StringBuilder password = new StringBuilder();
 
+
             for (int i = 0; i < size; i++)
             {
                 password.Append(this.getRandomCharacter());
             }
+
 
             return password.ToString();
         }
