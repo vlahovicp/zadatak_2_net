@@ -8,12 +8,14 @@ namespace zadatak_2_net
         static void Main(string[] args)
         {
             PasswordGenerator passwordGenerator = new BasicPasswordGenerator();
+            PasswordGenerator passwordGenerator2 = new SpecificPasswordGenerator();
 
             var passwords = new List<string>();
 
             for (int i = 0; i < 10; i++)
             {
                 passwords.Add(passwordGenerator.generatePassword(10));
+                passwords.Add(passwordGenerator2.generatePassword(10));
             }
 
             passwords.ForEach(delegate (string password)
