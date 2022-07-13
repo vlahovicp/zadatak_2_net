@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace zadatak_2_net
@@ -8,7 +9,9 @@ namespace zadatak_2_net
     {
         public override string generatePassword(int size)
         {
-            throw new NotImplementedException("TODO");
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            return new string(Enumerable.Repeat(chars, size)
+                .Select(s => s[random.Next(s.Length)]).ToArray());
         }
     }
 }
