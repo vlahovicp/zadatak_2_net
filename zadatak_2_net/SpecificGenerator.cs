@@ -12,11 +12,13 @@ namespace zadatak_2_net
 
             for (int i = 0; i < size; i++)
             {
-                char character;
-                do
-                {
-                    character = this.getRandomCharacter();
-                } while (character < 'a' || character > 'z');
+                char character = this.getRandomCharacter();
+
+                if (character >= 'A' && character <= 'Z')
+                    character = (char)(character + ('a' - 'A'));
+                else if (character >= '0' && character <= '9')
+                    character = (char)(character + ('a' - '0'));
+
                 password.Append(character);
             }
             return password.ToString();
